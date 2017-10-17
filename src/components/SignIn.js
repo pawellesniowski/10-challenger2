@@ -49,7 +49,8 @@ class SignIn extends Component {
                             onChange={e=>this.setState({password: e.target.value})}
                         />
                         <button
-                        type="button"
+                            className="button-black"
+                            type="button"
                             onClick={()=>this.signIn()}
                         >
                             Sign In

@@ -60,7 +60,8 @@ class SignUp extends Component {
                             onChange={e=>this.setState({password: e.target.value})}
                         />
                         <button
-                        type="button"
+                            className="button-black"
+                            type="button"
                             onClick={()=>this.signup()}
                         >
                             Sign Up
@@ -78,7 +79,7 @@ class SignUp extends Component {
                 </div>
                 {logged && (
                     <Redirect to={'/'}/>
-                    )}
+                )}
 
 
             </div>
