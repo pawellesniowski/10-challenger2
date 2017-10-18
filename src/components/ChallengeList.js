@@ -25,7 +25,7 @@ class ChallengeList extends Component {
             <div>
                 {challenges.reverse().map((challenge, index)=>{
                     return(
-                        <ChallengeItem key={index} challenge={challenge}/>
+                        <ChallengeItem challenge={challenge} key={index} />
                     );
                 })}
             </div>

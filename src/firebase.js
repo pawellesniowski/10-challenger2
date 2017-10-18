@@ -11,3 +11,4 @@ const config = {
 
 export const firebaseApp = firebase.initializeApp(config);
 export const challengeRef = firebase.database().ref('challenges');
+export const complitedRef = firebase.database().ref('complited');

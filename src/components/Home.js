@@ -17,7 +17,10 @@ class Home extends Component {
             <div className="page-info">
                 <h2>Challenger</h2>
                 <AddChallenge />
+                <hr/>
+                <h4>Challenges list</h4>
                 <ChallengeList />
+                <hr/>
                 <button 
                     className="button-red"
                     onClick={()=>this.signOut()}
