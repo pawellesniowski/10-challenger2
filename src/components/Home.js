@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import {firebaseApp} from '../firebase';
 import AddChallenge from './AddChallenge.js';
 import ChallengeList from './ChallengeList'; 
+import CompletedList from './CompletedList';
 
 class Home extends Component {
 
@@ -20,6 +21,8 @@ class Home extends Component {
                 <hr/>
                 <h4>Challenges list</h4>
                 <ChallengeList />
+                <hr/>
+                <CompletedList/>
                 <hr/>
                 <button 
                     className="button-red"

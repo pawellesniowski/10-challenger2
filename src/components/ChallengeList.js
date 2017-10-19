@@ -13,7 +13,8 @@ class ChallengeList extends Component {
             let challenges = [];
             snap.forEach(challenge=>{
                 const { email, title } = challenge.val();
-                challenges.push({email, title});
+                const serverKey = challenge.key;
+                challenges.push({email, title, serverKey});
             });
             this.props.actionCreatorSetChallenges(challenges);
         })

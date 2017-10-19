@@ -1,4 +1,4 @@
-import {SIGN_IN, SET_CHALLENGES} from '../constans';
+import {SIGN_IN, SET_CHALLENGES, SET_COMPLETED} from '../constans';
 
 
 export function actionCreatorLogUser (email){
@@ -15,6 +15,14 @@ export function actionCreatorSetChallenges(challenges){
     const action = {
         type: SET_CHALLENGES,
         challenges
+    }
+    return action;
+}
+
+export function setCompleted (completedChallenges){
+    const action = {
+        type: SET_COMPLETED,
+        completedChallenges
     }
     return action;
 }

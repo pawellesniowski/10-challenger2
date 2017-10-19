@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
-import { complitedRef } from '../firebase.js';
+import { completedRef, challengeRef } from '../firebase.js';
 
 
 class ChallengeItem extends Component {
 
-    complited(){
-        // add complited challenges to the database:
+    completed(){
+        // add completed challenges to the database:
         console.log(this.props);
         const { email } = this.props.user;
-        const { title } = this.props.challenge;
-        complitedRef.push({email, title});
-        // remove from 
+        const { title, serverKey } = this.props.challenge;
+
+        challengeRef.child(serverKey).remove();
+        completedRef.push({email, title});
+        // remove from challenges list:
+
+
     };
 
     render(){
@@ -23,9 +26,9 @@ class ChallengeItem extends Component {
                 <span><em>{` subbmited by ${email}`} </em></span>
                 <button 
                     className="button-black"
-                    onClick={()=>{this.complited()}}
+                    onClick={()=>{this.completed()}}
                 >
-                    Complited
+                    completed
                 </button>
             </div>
         );
