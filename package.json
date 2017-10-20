@@ -21,5 +21,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://pawellesniowski.github.io/10-challenger2/",
+  "homepage": "https://pawellesniowski.github.io/10-challenger2/"
 }
